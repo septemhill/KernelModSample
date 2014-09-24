@@ -43,7 +43,7 @@ static int __init kworkqueue_init(void)
   schedule_delayed_work(&data1.work, 10000);
   schedule_delayed_work(&data2.work, 20000);
 
-  printk("Module Installed\n");
+  printk("======= [kwq_delay] Module Installed =======\n");
 
   return 0;
 }
@@ -53,7 +53,7 @@ static void __exit kworkqueue_exit(void)
   cancel_delayed_work(&data1.work);
   cancel_delayed_work(&data2.work);
 
-  printk("Module Removed\n");
+  printk("======= [kwq_delay] Module Removed =======\n");
 }
 
 MODULE_LICENSE("GPL");

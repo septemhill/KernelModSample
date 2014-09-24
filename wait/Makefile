@@ -1,8 +1,7 @@
 KDIR		:= /lib/modules/$(shell uname -r)/build
 PWD		:= $(shell pwd)
 
-obj-m		:= wait.o
-wait-y		:= main.o
+obj-m		:= main.o
 
 .PHONY:	all clean
 

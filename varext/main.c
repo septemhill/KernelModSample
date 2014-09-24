@@ -57,7 +57,7 @@ static int varextee_init(void)
     return -1;
   }
 
-  printk("========================\n");
+  printk("======= [VAREXTEE] Module Installed =======\n");
   printk("[VAREXTEE] extedvar: %d\n", extedvar);
 
   return 0;
@@ -69,7 +69,7 @@ static void varextee_exit(void)
 
   cdev_del(&cdev);
 
-  printk("[VAREXTEE] Module Removed\n");
+  printk("======= [VAREXTEE] Module Removed =======\n");
 }
 
 EXPORT_SYMBOL(extedvar);

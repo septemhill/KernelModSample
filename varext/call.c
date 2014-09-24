@@ -52,8 +52,10 @@ static int varexter_init(void)
   err = cdev_add(&cdev, dev_num, 1);
 
   if (err) {
-    printk("[VAREXTED] cdev_add failed\n");
+    printk("[VAREXTER] cdev_add failed\n");
   }
+
+  printk("======= [VAREXTER] Module Installed =======\n");
 
   return 0;
 }
@@ -61,6 +63,8 @@ static int varexter_init(void)
 static void varexter_exit(void)
 {
   unregister_chrdev_region(dev_num, 1);
+
+  printk("======= [VAREXTER] Module Removed =======\n");
 }
 
 module_init(varexter_init);

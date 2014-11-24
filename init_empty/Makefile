@@ -1,4 +1,9 @@
+ifeq ($(EMBEDDED),y)
+KDIR		:= /home/septemhill/bmcprj/build/ast2300/kernel
+else
 KDIR		:= /lib/modules/$(shell uname -r)/build
+endif
+
 PWD		:= $(shell pwd)
 
 obj-m		:= empty.o
